@@ -16,6 +16,16 @@
   }
 }
 
+@font-face {
+  font-family: "cabin-regular";
+  src: url("../assets/fonts/cabin/Cabin-Regular.ttf");
+}
+
+@font-face {
+  font-family: "cabin-bold";
+  src: url("../assets/fonts/cabin/Cabin-Bold.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
