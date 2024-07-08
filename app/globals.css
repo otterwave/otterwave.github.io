@@ -41,3 +41,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.title {
+  h2 {
+    margin-right: 12px;
+  }
+}

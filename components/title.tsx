@@ -1,6 +1,6 @@
 export function MainTitle() {
   return (
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center title">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +10,7 @@ export function MainTitle() {
         preserveAspectRatio="xMidYMid meet"
       >
         <g
-          transform="translate(0.000000,258.000000) scale(0.100000,-0.100000)"
+          transform="translate(-16,255) scale(0.100000,-0.100000)"
           fill="#ffffff"
           stroke="none"
         >
@@ -58,7 +58,7 @@ export function MainTitle() {
           />
         </g>
       </svg>
-      <h2 className="text-7xl">tterwave</h2>
+      <h2 className="text-7xl">tterwave </h2>
     </div>
   );
 }
