@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         </a>
       </header>
       <div className="flex flex-col items-center justify-start gap-8 max-w-3xl text-center m-auto">
-        <h1>Votre guide pour l&apos;automatisation du marketing</h1>
+        <h1>La nouvelle vague du marketing</h1>
         <p className="max-w-lg m-auto">
           Optimisez vos campagnes avec notre logiciel de marketing automation.
           Augmentez vos leads, améliorez la qualification et dynamisez vos
