@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import OWButton from "@/components/buttons/OWButton";
 import { MainTitle } from "@/components/title";
+import AboutSection from "@/components/bloc/AboutSection";
+import DiscoverSection from "@/components/bloc/DiscoverSection";
 
 const Home: React.FC = () => {
-  const handleClick = (section: string) => {
-    console.log("hey"), section;
+  const [currentSection, setCurrentSection] = useState<"main" | "about" | "discover">("main");
+
+  const handleBack = () => {
+    setCurrentSection("main");
   };
 
   return (
@@ -20,29 +24,33 @@ const Home: React.FC = () => {
           Contactez-nous
         </a>
       </header>
-      <div className="flex flex-col items-center justify-start gap-8 max-w-3xl text-center m-auto">
-        <h1>La nouvelle vague du marketing</h1>
-        <p className="max-w-lg m-auto">
-          Optimisez vos campagnes avec notre logiciel de marketing automation.
-          Augmentez vos leads, améliorez la qualification et dynamisez vos
-          campagnes grâce à nos experts. Gagnez du temps et rentabilisez votre
-          temps.
-        </p>
-        <h3>Boostez votre marketing avec nos solutions innovantes.</h3>
-        <p>Commencez l&apos;aventure dès maintenant !</p>
-        <div className="flex flex-row justify-between items-center gap-8">
-          <OWButton
-            action="À propos"
-            color="primary"
-            onClick={() => handleClick("about")}
-          />
-          <OWButton
-            action="Découvrir"
-            color="secondary"
-            onClick={() => handleClick("discover")}
-          />
+      {currentSection === "main" && (
+        <div className="flex flex-col items-center justify-start gap-8 max-w-3xl text-center m-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-poppins">La nouvelle vague du marketing</h1>
+          <p className="text-base sm:text-lg md:text-xl font-arimo max-w-lg m-auto">
+            Optimisez vos campagnes avec notre logiciel de marketing automation.
+            Augmentez vos leads, améliorez la qualification et dynamisez vos
+            campagnes grâce à nos experts. Gagnez du temps et rentabilisez votre
+            temps.
+          </p>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-arimo">Boostez votre marketing avec nos solutions innovantes.</h3>
+          <p className="text-base sm:text-lg md:text-xl">Commencez l&apos;aventure dès maintenant !</p>
+          <div className="flex flex-row justify-between items-center gap-8">
+            <OWButton
+              action="À propos"
+              color="primary"
+              onClick={() => setCurrentSection("about")}
+            />
+            <OWButton
+              action="Découvrir"
+              color="secondary"
+              onClick={() => setCurrentSection("discover")}
+            />
+          </div>
         </div>
-      </div>
+      )}
+      {currentSection === "about" && <AboutSection onBack={handleBack} />}
+      {currentSection === "discover" && <DiscoverSection onBack={handleBack} />}
     </>
   );
 };
