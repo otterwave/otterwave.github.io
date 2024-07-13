@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="font-poppins bg-gradient-to-br from-teal-500 from-40% to-ternary">
+      <body className="font-poppins bg-gradient-to-br from-teal-500 to-ternary min-h-screen">
         <main className="flex flex-col justify-between min-h-[calc(100dvh)] w-full md:w-full sm:w-full lg:w-full">
           {children}
         </main>
