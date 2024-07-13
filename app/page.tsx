@@ -1,68 +1,32 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import OWButton from "@/components/buttons/OWButton";
 import { MainTitle } from "@/components/title";
 
 const Home: React.FC = () => {
-  const [showSection, setShowSection] = useState<string | null>(null);
-
   const handleClick = (section: string) => {
-    setShowSection(section);
+    console.log('hey'), section;
   };
 
   return (
     <>
-      <div className="flex flex-col justify-between items-center gap-8">
+      <header className='align-top p-3 flex justify-between'>
         <MainTitle />
-        <h3>Your guide to marketing automation</h3>
-        <p>Boost your sales, save time and money ! </p>
+        <a href='mailto:sales.otterwave@gmail.com' className='transition duration-300 hover:underline pr-2'>Contactez-nous</a>
+      </header>
+      <div className="flex flex-col items-center justify-start gap-8 max-w-3xl text-center m-auto">
+        <h1 className='text-6xl'>Votre guide pour l'automatisation du marketing</h1>
+        <p className='max-w-lg m-auto'>Optimisez vos campagnes avec notre logiciel de marketing automation. Augmentez vos leads, améliorez la qualification et dynamisez vos campagnes emailing grâce à nos experts. Gagnez du temps et simplifiez votre utilisation.</p>
+        <h3 className='text-3xl'>Boostez votre marketing avec nos solutions innovantes.</h3>
+        <p>Commencez l'aventure dès maintenant !</p>
+        <div className="flex flex-row justify-between items-center gap-8">
+        <OWButton action="À propos" color="primary" onClick={() => handleClick('about')} />
+          <OWButton action="Découvrir" color="secondary" onClick={() => handleClick('discover')} />
+        </div>
       </div>
-      <div className="flex flex-row justify-between items-center gap-8 pt-24">
-        <OWButton action="Discover" color="primary" onClick={() => handleClick('discover')} />
-        <OWButton action="About us" color="secondary" onClick={() => handleClick('about')} />
-        <OWButton action="Get in touch" path="mailto:sales.otterwave@gmail.com" color="primary" />
-      </div>
-      {showSection === 'discover' && (
-        <DiscoverSection />
-      )}
-      {showSection === 'about' && (
-        <AboutUsSection />
-      )}
     </>
   );
 }
-
-const DiscoverSection: React.FC = () => {
-  return (
-    <div className="mt-8 p-4 rounded-md text-center"
-         style={{
-           background: '#E76F51', // Fond primaire
-           color: 'white',
-           boxShadow: '0 5px 10px rgba(0, 0, 0, 0.15)',
-         }}>
-      <p className="text-lg">
-      Revolutionize your marketing strategy with our cutting-edge product design. Enhance automation, boost lead generation, streamline qualification, and supercharge your email campaigns—all while saving valuable time and ensuring effortless usability.
-      </p>
-    </div>
-  );
-};
-
-const AboutUsSection: React.FC = () => {
-  return (
-    <div className="mt-8 p-4 rounded-md text-center"
-         style={{
-           background: '#E76F51', // Fond primaire
-           color: 'white',
-           boxShadow: '0 5px 10px rgba(0, 0, 0, 0.15)',
-         }}>
-      <p className="text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in magna eget dolor accumsan semper.
-        Integer finibus faucibus lacus, eget consequat dui rutrum in. Duis vel efficitur lectus.
-      </p>
-    </div>
-  );
-};
-
 
 export default Home;

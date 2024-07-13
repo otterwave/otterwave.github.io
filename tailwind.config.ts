@@ -14,12 +14,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "#36BA98",
-        secondary: "#E76F51"
+        primary: '#36BA98',
+        secondary: '#F4A261',
+        ternary: '#E9C46A',
+        orange: '#F4A261'
       },
       fontFamily: {
-        cabin_regular: ["cabin-regular"],
-        cabin_bold: ["cabin-bold"],
+        poppins: ['Poppins', 'sans-serif'],
+        arimo: ['Arimo', 'sans-serif'],
       },
     },
   },

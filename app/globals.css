@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,19 +15,13 @@
   }
 }
 
-@font-face {
-  font-family: "cabin-regular";
-  src: url("../assets/fonts/cabin/Cabin-Regular.ttf");
-}
-
-@font-face {
-  font-family: "cabin-bold";
-  src: url("../assets/fonts/cabin/Cabin-Bold.ttf");
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: #36BA98;
+
+  p {
+    @apply font-arimo;
+  }
 }
 
 @layer utilities {

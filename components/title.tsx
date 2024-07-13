@@ -4,11 +4,11 @@ export function MainTitle() {
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        width="150"
-        height="150"
+        width="50"
+        height="50"
         viewBox="0 0 220.000000 240.000000"
         preserveAspectRatio="xMidYMid meet"
-        className="mt-[-40px] mr-[-12px]"
+        className="mt-[-12px] mr-[-2px]"
       >
         <g
           transform="translate(-16,255) scale(0.100000,-0.100000)"
@@ -59,7 +59,7 @@ export function MainTitle() {
           />
         </g>
       </svg>
-      <h2 className="text-7xl mr-3">tterwave </h2>
+      <h2 className="text-3xl mr-3">tterwave </h2>
     </div>
   );
 }

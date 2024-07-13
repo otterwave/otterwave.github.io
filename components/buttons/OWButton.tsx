@@ -8,18 +8,16 @@ export interface OWButtonProps {
 }
 
 const OWButton: React.FC<OWButtonProps> = ({ action, color, onClick }) => {
-  const gradientClasses = color === 'primary'
-    ? { from: '#36BA98', to: '#E76F51' }
-    : { from: '#E76F51', to: '#36BA98' };
+  const btnColor = color === 'primary' ? '#36BA98' : '#F4A261'
 
   return (
     <button
       onClick={onClick}
       className="px-4 py-2 text-white rounded-sm transition duration-300 inline-block"
       style={{
-        background: `linear-gradient(135deg, ${gradientClasses.from}, ${gradientClasses.to})`,
+        background: btnColor,
         color: 'white',
-        borderRadius: '8px',
+        borderRadius: '32px',
         padding: '0.75rem 1.5rem',
         boxShadow: '0 5px 10px rgba(0, 0, 0, 0.15)',
         textDecoration: 'none',
