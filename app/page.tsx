@@ -13,6 +13,10 @@ const Home: React.FC = () => {
     setCurrentSection("main");
   };
 
+  const handleInterest = () =>  {
+    //TODO open modale to contact us (mautic form)
+  }
+
   return (
     <>
       <header className="p-3 flex justify-between">
@@ -50,7 +54,7 @@ const Home: React.FC = () => {
         </div>
       )}
       {currentSection === "about" && <AboutSection onBack={handleBack} />}
-      {currentSection === "discover" && <DiscoverSection onBack={handleBack} />}
+      {currentSection === "discover" && <DiscoverSection onBack={handleBack} onInterest={handleInterest} />}
     </>
   );
 };

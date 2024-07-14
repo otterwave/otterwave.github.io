@@ -3,17 +3,28 @@ import OWButton from "@/components/buttons/OWButton";
 
 interface DiscoverSectionProps {
   onBack: () => void;
+  onInterest: () => void;
 }
 
-const DiscoverSection: React.FC<DiscoverSectionProps> = ({ onBack }) => {
+const DiscoverSection: React.FC<DiscoverSectionProps> = ({ onBack, onInterest }) => {
   return (
-    <div className="flex flex-col items-center justify-center p-8 text-white m-auto">
-      <h1>Découvrez nos solutions</h1>
-      <p className="max-w-3xl m-auto mb-2 mt-8 text-center py-8">
-        Explorez notre gamme de solutions de marketing automation conçues pour améliorer l&apos;efficacité de vos campagnes, augmenter vos leads, et simplifier vos processus marketing.
-      </p>
-      <OWButton action="Retour à l'accueil" color="secondary" onClick={onBack} />
-    </div>
+    <div className="flex flex-col items-center justify-center p-8 text-white m-auto max-w-3xl text-center">
+      <h3 className="py-4">Une offre de lancement à ne pas manquer !</h3>
+      <ul>
+        <li>- Mise en place de Mautic</li>
+        <li>- Ebook pour améliorer sa stratégie en 10 points essentiels, pour améliorer son taux de conversion auprès des prospects en 90 jours</li>
+        <li>- Support pour l&apos;installation et l&apos;utilisation de Mautic</li>
+        <li>- Aide à la création de la base de données de contact</li>
+        <li>- Assistance et évolutions sur demande</li>
+      </ul>
+      <h3 className="m-auto py-8">
+        59.99 euros par mois sans engagement pour les 10 premiers clients !
+      </h3>
+      <div className="flex flex-row justify-between items-center gap-8">
+        <OWButton action="Je suis intéressé" color="primary" onClick={onInterest} />
+        <OWButton action="Retour à l'accueil" color="secondary" onClick={onBack} />
+        </div>
+      </div>
   );
 };
 
