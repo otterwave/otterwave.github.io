@@ -11,9 +11,9 @@ const DiscoverSection: React.FC<DiscoverSectionProps> = ({ onBack, onInterest })
     <div className="flex flex-col items-center justify-center p-8 text-white m-auto max-w-3xl text-center">
       <h3 className="py-4">Une offre de lancement à ne pas manquer !</h3>
       <ul>
-        <li>- Mise en place de Mautic</li>
+        <li>- Mise en place de notre logiciel</li>
         <li>- Ebook pour améliorer sa stratégie en 10 points essentiels, pour améliorer son taux de conversion auprès des prospects en 90 jours</li>
-        <li>- Support pour l&apos;installation et l&apos;utilisation de Mautic</li>
+        <li>- Support pour l&apos;installation et l&apos;utilisation de notre logiciel</li>
         <li>- Aide à la création de la base de données de contact</li>
         <li>- Assistance et évolutions sur demande</li>
       </ul>
