@@ -1,7 +1,7 @@
 export function MainTitle() {
   return (
-    <div className="flex flex-row items-center mt-3 h-20">
-      <svg id="lining" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <div className="flex flex-row items-center mt-3">
+      <svg className=" h-20" id="lining" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
     <style>{`
       .cls-1, .cls-2, .cls-3, .cls-4 {
